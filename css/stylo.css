@@ -1,0 +1,46 @@
+/* Reset default margin and padding */
+body, h1 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set background color */
+body {
+    background-color: #00FF00; /* Technologic looking green color */
+    overflow: hidden; /* Hide horizontal and vertical scrollbars */
+}
+
+/* Style the title text */
+#title {
+    font-size: 10vw; /* Set font size to 10% of viewport width, adjusts to screen size */
+    color: #FFFFFF; /* White color */
+    text-align: center; /* Center align the text */
+    position: absolute; /* Position the title absolutely in the center */
+    top: 50%; /* Position from top 50% */
+    left: 50%; /* Position from left 50% */
+    transform: translate(-50%, -50%); /* Center align horizontally and vertically */
+}
+
+/* Style the square div */
+#square {
+    width: 50px;
+    height: 50px;
+    background-color: #FFFFFF; /* White color */
+    position: absolute; /* Position the square absolutely */
+    top: 0; /* Position from top 0 */
+    left: 0; /* Position from left 0 */
+    animation: bounce 2s infinite; /* Apply bounce animation */
+}
+
+/* Define the bounce animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); /* Reset vertical position at keyframes */
+    }
+    40% {
+        transform: translateY(-50px); /* Move square up by 50px at 40% keyframe */
+    }
+    60% {
+        transform: translateY(-30px); /* Move square up by 30px at 60% keyframe */
+    }
+}
