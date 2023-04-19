@@ -10,11 +10,13 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 10vw;
+    font-size: 12vmin; /* Adjust font size to fit viewport width */
     font-weight: bold;
     color: #000;
     text-align: center;
+    margin-top: 30vh; /* Adjust margin from top */
     text-transform: uppercase;
+    
 }
 
 #square {
@@ -45,5 +47,31 @@ body {
     75% {
         top: calc(100% - 50px);
         left: 0;
+    }
+}
+
+#textbox-container {
+    text-align: center;
+    margin-top: 5vh; /* Adjust margin from top */
+}
+
+#textbox {
+    display: inline-block;
+    padding: 10px;
+    background-color: #FFF; /* White background for textbox */
+    color: #000; /* Black text color */
+    cursor: pointer;
+    animation: shake 2s infinite; /* Apply animation to the textbox */
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(5deg); /* Rotate clockwise */
+    }
+    50% {
+        transform: rotate(-5deg); /* Rotate counterclockwise */
+    }
+    100% {
+        transform: rotate(5deg); /* Rotate clockwise */
     }
 }
